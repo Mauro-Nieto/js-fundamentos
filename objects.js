@@ -1,53 +1,61 @@
-var mauro = {
-    nombre:'mauro',
-    apellido: 'Nieto',
-    edad: 30         
+var computadorMao = {
+    teclado: 'tefclado inalambrico',
+    mouse: 'mouse inalambrico',
+    monitor: 'monitor de 40 pulgadas',
+    memoriaRam: 1000,
+    marca: 'DELL'
 }
 
-var cris = {
-    nombre:'cris',
-    apellido: 'Peña',
-    edad: 31         
+var computadorCami = {
+    teclado: 'teclado analogo',
+    mouse: 'mouse analogo',
+    monitor: '17 pulgadas',
+    memoriaRam: 800,
+    marca: 'asus'
 }
-// function imprimirNombreEnMayusculas(n){
-//     n = n.toUpperCase()
-//     console.log(n)
-// }
-// imprimirNombreEnMayusculas(mauro.nombre)
-// imprimirNombreEnMayusculas(cris.nombre)
 
 
-// function imprimirNombreEnMayusculas(n){
-//     console.log(n.nombre.toUpperCase())
-// }
-// imprimirNombreEnMayusculas(mauro)
-// imprimirNombreEnMayusculas(cris)
-
-// function imprimirNombreEnMayusculas({nombre}){
-//     console.log(nombre.toUpperCase())
-// }
-// imprimirNombreEnMayusculas(mauro)
-// imprimirNombreEnMayusculas(cris)
-// imprimirNombreEnMayusculas ({nombre:'Pepito'})
-
-// function imprimirNombreEnMayusculas(n){
-//     // var nombre = n.nombre
-//     var  {nombre} = n
-//     console.log(nombre.toUpperCase())
-// }
-
-// imprimirNombreEnMayusculas(mauro)
-// imprimirNombreEnMayusculas(cris)
-
-function imprimirNombreApellidoyEdad (nombre, apellido, edad){
-    console.log(`Hola me llamo ${nombre} ${apellido} y tengo ${edad} años `)
+function imprimirMouse({ mouse }){
+    console.log(mouse.toUpperCase())
 }
-imprimirNombreApellidoyEdad(mauro.nombre, mauro.apellido, mauro.edad)
+
+imprimirMouse(computadorMao)
+imprimirMouse(computadorCami)
 
 
-function cumpleanios(mauro) {
+
+// 
+// 
+// DESESTRUCTURAR OBJETOS
+
+function imprimirMouse(computadores){
+    var {mouse} = computadores
+    console.log(mouse.toUpperCase())
+}
+
+imprimirMouse(computadorMao)
+imprimirMouse(computadorCami)
+    
+
+
+
+// Mi computador es marca x y tiene y de memoria
+function imprimirMarcaYMemoria({marca, memoriaRam}){
+    console.log (`Mi computador es ${marca} y tiene ${memoriaRam} de memoria`)
+}
+imprimirMarcaYMemoria(computadorMao)
+imprimirMarcaYMemoria(computadorCami)
+
+
+
+// 
+// 
+// DESGLOCE
+
+function masMemoria(computadores){
     return {
-        ...mauro,
-        edad: mauro.edad +1
+        ...computadores,
+        memoriaRam: computadores.memoriaRam + 100
     }
 }
+var memoriaMejorada = masMemoria(computadorCami)

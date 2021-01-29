@@ -23,7 +23,7 @@ var total = Math.round(precioDeVino * 100 * 3)/100
 
 var totalStr = total.toFixed(2)
 
-// con parce transformamos de un tipo a otro flot son los decimales parce transformar
+// con parceFloat transformamos de un tipo a otro flot son los decimales parce transformar
 var total2 = parseFloat(totalStr)
 
 var pizza = 8 

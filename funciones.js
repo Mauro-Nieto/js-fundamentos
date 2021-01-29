@@ -1,21 +1,35 @@
-var nombre = "Mauro"
-var edad = 28
+var nombre 
+var apellido 
+var edad 
 
-function imprimirEdad(){
-    console.log(`${nombre} tiene ${edad} años`)
+// function imprimirEdad(){
+//     console.log(`${nombre} tiene ${edad} años`)
+// } 
+
+// imprimirEdad()
+
+function imprimirEdad(n, a, e){
+    console.log(`${n} ${a} tiene ${e} años`)
 } 
 
-imprimirEdad()
+imprimirEdad(apellido, nombre, edad)
 
-function imprimirEdad(n, e){
-    console.log(`${n} tiene ${e} años`)
-} 
-
-imprimirEdad(nombre, edad)
-
-imprimirEdad('Laura', 23)
-imprimirEdad('diego', 25)
+imprimirEdad('Laura', 'Cardenas', 23)
+imprimirEdad('diego', 'lopez', 25)
 // javascript simpre va a tratar de leer los datos 
-imprimirEdad(23, 'erick')
+imprimirEdad(23, 'erick','diaz' )
 
 
+// 
+// 
+// 
+// Alcance
+
+var nombre = 'Mauro'
+
+function nombreEnMayusculas (n){
+    console.log(n.toUpperCase())
+}
+
+
+nombreEnMayusculas(nombre)
