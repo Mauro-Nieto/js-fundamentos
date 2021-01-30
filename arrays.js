@@ -36,7 +36,13 @@ var leo = {
     cantidadDelibros:98
 }
 
+var personas 
 
+// const esAlta = (persona) => {
+//     return persona.altura > 1.7
+// }
+
+// ({  }) desgloce ...desgloce que genera nuevo objeto
 const esAlta = ({altura}) => altura > 1.7
 const esBaja = ({altura}) => altura < 1.7
  

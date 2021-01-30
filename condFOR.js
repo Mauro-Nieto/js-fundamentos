@@ -10,18 +10,14 @@ console.log(`Al inicio de año ${mauro.nombre} pesa ${mauro.peso} kg`)
 const INCREMENTO_PESO = 0.2
 const DIAS_DEL_AÑO = 365
 
-function aumentarDePEso (persona) {
-    return persona.peso += INCREMENTO_PESO
-}
+function aumentarDePEso = persona => persona.peso += INCREMENTO_PESO
+function adelgazar = persona => persona.peso -= INCREMENTO_PESO
 
-function adelgazar (persona) {
-    return persona.peso -= INCREMENTO_PESO
-}
 // const aumentarDePEso = persona => persona.peso += 200
 
 
 // usar contador
-for (var i = 1; i <=DIAS_DEL_AÑO; i++){
+for (var i = 1; i <= DIAS_DEL_AÑO; i++){
     var random = Math.random()
 //aumenta de peso
     if(random <0.25){
