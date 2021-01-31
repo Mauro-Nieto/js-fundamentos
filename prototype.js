@@ -18,7 +18,7 @@ alto(){
 }
 
 class desarrollador extends Persona{
-    constructor(nombre, apelido, altura){
+    constructor(nombre, apellidos, altura){
         super(nombre, apellidos, altura)
 }
 saludar(){
@@ -30,14 +30,14 @@ saludar(){
 
 
 
-// var mauro = new Persona('mauro', 'nieto', 1.82)
-// var camila = new Persona('camila', 'cardenas', 1.90)
-// var cris = new Persona('cris', 'peña', 1.70)
+var mauro = new Persona('mauro', 'nieto', 1.82)
+var camila = new Persona('camila', 'cardenas', 1.90)
+var cris = new Persona('cris', 'peña', 1.70)
 
 // new seguida del prototipo hace que se genere un nuevo objeto.
 // 
 
-
+ 
 // agregar atributo altura
 // se le tiene que pasar al constructor
 // agregar la funcion al prototipo de persona que sea "soy alto "
